@@ -15,6 +15,7 @@ exports.up = function(knex) {
         jokes.increments();
         jokes.string('setup', 2000).notNullable();
         jokes.string('punchline', 2000).notNullable();
+        jokes.string('category', 2000);
         jokes.boolean('public').notNullable().defaultTo(true);
         jokes
             .integer('userId')
