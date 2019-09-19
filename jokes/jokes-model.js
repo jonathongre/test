@@ -19,7 +19,7 @@ function findMyJokes({ author }) {
 
 function findPublic() {
     return db('jokes')
-        .select('id', 'setup', 'punchline', 'userID', 'author', 'public')
+        .select()
         .where({ public: 1 });
 }
 
