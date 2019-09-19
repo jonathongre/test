@@ -28,7 +28,7 @@ function findBy(filter) {
   }
   
   async function add(joke) {
-    const [id] = await db('jokes').insert(joke);
+    const [id] = await db('jokes').insert(joke, 'id');
   
     return findById(id);
   }
